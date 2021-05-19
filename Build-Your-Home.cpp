@@ -2,12 +2,30 @@
 //
 
 #include <iostream>
+#include <windows.h>
+#include <string.h>
+
+using namespace std;
+
+void cartoon();
+void princar(const char a[]);//动画方式输出文字
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    cartoon();
+    system("pause");
+    return 0;
 }
 
+void cartoon() {
+    princar("陈文骁制作！");
+}
+void princar(const char a[]) {
+    for (int i = 0; i < strlen(a); i++) {
+        cout << a[i];
+        Sleep(200);
+    }
+}
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
 
